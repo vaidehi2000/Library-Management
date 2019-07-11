@@ -1,7 +1,4 @@
-#include <ncurses.h>
-#include<curses.h>
 #include<stdio.h>
-//#include<conio.h>
 #include <stdlib.h>
 #include<string.h>
 
@@ -174,7 +171,7 @@ void deletebooks()   // delete books
 
         printf("The book record is available\n");
 
-        printf("Book name is %s",a.name);
+        printf("Book name is %s\n",a.name);
 
 
         findbook='t';
@@ -500,23 +497,23 @@ void viewbooks(void)
 
     printf("\n*********************************Book List*****************************\n");
 
-    printf(" CATEGORY       ID             BOOK NAME              AUTHOR                    QTY             PRICE           \n");
+  //  printf(" CATEGORY       ID             BOOK NAME              AUTHOR                    QTY             PRICE           \n");
     j=4;
     fp=fopen("book.txt","r+");
     while(fread(&a,sizeof(a),1,fp)==1)
     {
 
-    printf("%s\t\t",a.cat);
+    printf("CATEGORY : %s\t\n",a.cat);
 
-    printf("%d\t\t",a.id);
+    printf("ID : %d\t\n",a.id);
 
-    printf("%s\t\t\t",a.name);
+    printf("BOOK NAME : %s\n",a.name);
 
-    printf("%s\t\t\t",a.Author);
+    printf("AUTHOR : %s\n",a.Author);
 
-    printf("%d\t\t",a.quantity);
+    printf("QTY : %d\n",a.quantity);
 
-    printf("%.2f\t\t",a.Price);
+    printf("PRICE : %.2f\n",a.Price);
 
 
     printf("\n\n");
@@ -648,7 +645,7 @@ void Password()
 
    char ch,pass[10];
    int i=0,j;
-   system("COLOR 4E");
+   system("COLOR 08");
 
    printf("###************Protected Password****************###\n");
    printf("\t    ========================");
@@ -672,7 +669,7 @@ void Password()
    if(strcmp(pass,password)==0)
    {
 
-    printf("Password match\n");
+    printf("\nPassword match\n");
 
     printf("Press any key to countinue.....");
     getch();
