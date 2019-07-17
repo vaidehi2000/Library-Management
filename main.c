@@ -19,7 +19,7 @@ FILE *fp,*ft,*fs;
 
 int s;
 char findbook;
-char password[10]={"c"};
+char password[10]={"IIITV"};
 
 
 struct books
